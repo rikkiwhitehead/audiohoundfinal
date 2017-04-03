@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiohound</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    
+  </head>
+  <body onload="showSearches();">
+  
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+  <div class="top-bar" id="main-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">AudioHound</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+        <li><a href="artistsearch.html">Search by artist...</a></li>
+        <li><a href="albumsearch.html">Search by album...</a></li>
+        <li><a href="about.html">About audiohound</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="backgroundimage">
+    <div class="row">
+      <div class="medium-12 columns" style="padding-top:15%; padding-bottom:5%;" >
+        <div class="primary callout" style=" min-height:200px;">
+          <div class="row ">
+            <h1 style="color:white; text-align:center;">Search by album...</h1>
+              <div class="content">
+                <div class="container">
+                  <form id="search-form">
+                      <input type="text" id="query" value="" class="form-control" placeholder="Type an Albums name"/>
+                      <input type="submit" id="search" class="btn btn-primary alert button" value="Search" />
+                  </form>
+                  <div id="results"></div>
+              </div>
+              <script id="results-template" type="text/x-handlebars-template"><p style="color:white; margin-left: 5%;">Click an album to hear a preview!</p>
+                  {{#each albums.items}}
+                  <div style="background-image:url({{images.0.url}}); margin-left: 5%;" data-album-id="{{id}}" class="cover"></div>
+                  {{/each}}
+              </script>
+            </div>
+                           <div class="savedsearch"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+    </div>
+
+
+     
+
+
+    <div class="large-12 columns" style="padding:0px !important">
+      <footer class="footer">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="slogan">Audiohound</p>
+          <p class="links">
+            <a href="index.html">Search</a>
+            <a href="about.html">About</a>
+            <a href="legal.html">Legal</a>
+          </p>
+          <p class="copywrite">Copywrite &#45; u1358229 © 2016</p>
+        </div>
+      </div>
+    </footer>
+    </div>
+  </div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+ <script type="text/javascript" src="js/map.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/artistsearch.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
